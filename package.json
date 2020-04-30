@@ -1,0 +1,18 @@
+{
+  "name": "nodejspratice",
+  "version": "1.0.0",
+  "description": "Node crash Course",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main",
+	"dev": "nodemon main"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
