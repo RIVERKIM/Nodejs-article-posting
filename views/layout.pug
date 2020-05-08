@@ -1,0 +1,51 @@
+doctype html
+html
+	head
+		title Knowledgebase
+		link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet" href="/css/style.css")
+	body
+		nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+			a.navbar-brand(href='#') Knowledgebase
+			button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarsExampleDefault.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item
+						a.nav-link(href='/') | Home 
+							span.sr-only (current)
+					if user
+						li.nav-item
+							a.nav-link(href='/articles/add') Add Article
+					li.nav-item.dropdown
+						a#dropdown01.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+						.dropdown-menu(aria-labelledby='dropdown01')
+							a.dropdown-item(href='#') Action
+							a.dropdown-item(href='#') Another action
+							a.dropdown-item(href='#') Something else here
+				ul.navbar-nav.navbar-right
+					if user
+						li.nav-item
+							a.nav-link(href='/users/logout') logout
+					else
+						li.nav-item
+							a.nav-link(href='/users/register') Register
+						li.nav-item
+							a.nav-link(href='/users/login') Login
+					
+		.container
+			br
+			!= messages('message', locals)
+			if errors
+				each error in errors
+					div(class="alert alert-danger") #{error.msg}
+			block content
+			br
+			hr
+			footer
+				p copyright &copy; 2017
+		script(src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous")
+		script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+		script(src="/js/main.js")

@@ -1,4 +1,2 @@
 node_modules
-reference
-logger.js
-person.js
+package-lock.json

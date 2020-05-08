@@ -1,18 +1,33 @@
 {
   "name": "nodejspratice",
   "version": "1.0.0",
-  "description": "Node crash Course",
-  "main": "main.js",
+  "description": "practice app",
+  "main": "app.js",
   "scripts": {
-    "start": "node main",
-	"dev": "nodemon main"
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIVERKIM/Node-js-practice.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "uuid": "^7.0.3"
+  "bugs": {
+    "url": "https://github.com/RIVERKIM/Node-js-practice/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
+  "homepage": "https://github.com/RIVERKIM/Node-js-practice#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.1",
+    "mongoose": "^5.9.10",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4"
   }
 }
